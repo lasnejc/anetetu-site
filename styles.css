@@ -1,0 +1,196 @@
+:root {
+  --bg: #f7f8fa;
+  --card: #ffffff;
+  --ink: #1d2433;
+  --muted: #5b6475;
+  --line: #e3e7ee;
+  --brand: #0f7b5f;
+  --brand-dark: #0a5c47;
+  --accent: #ff7a3d;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+a { color: var(--brand); }
+a:hover { color: var(--brand-dark); }
+
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 22px; }
+
+header.site {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+}
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.logo span { color: var(--brand); }
+nav a {
+  margin-left: 18px;
+  font-size: 15px;
+  color: var(--muted);
+  text-decoration: none;
+}
+nav a:hover { color: var(--ink); }
+
+.hero {
+  padding: 72px 0 56px;
+  background: linear-gradient(160deg, #e9f6f1 0%, #f7f8fa 60%);
+}
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.12;
+  margin: 0 0 16px;
+  letter-spacing: -1px;
+}
+.hero p.lead {
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 680px;
+  margin: 0 0 28px;
+}
+.badge {
+  display: inline-block;
+  background: #fff3ec;
+  color: #b4471a;
+  border: 1px solid #ffd7c2;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn:hover { background: var(--brand-dark); color: #fff; }
+.btn.ghost {
+  background: transparent;
+  color: var(--brand);
+  border: 2px solid var(--brand);
+  margin-left: 10px;
+}
+
+section { padding: 56px 0; }
+section h2 {
+  font-size: 30px;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+}
+section p.sub { color: var(--muted); margin: 0 0 28px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.card .icon { font-size: 28px; }
+.card h3 { margin: 8px 0 6px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+.devices { display: flex; flex-wrap: wrap; gap: 12px; }
+.device {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 600;
+}
+.device small { display: block; font-weight: 400; color: var(--muted); }
+
+.notice {
+  background: #fffbea;
+  border: 1px solid #f3e3a1;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 15.5px;
+}
+
+footer.site {
+  border-top: 1px solid var(--line);
+  background: var(--card);
+  padding: 28px 0;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+footer.site a { color: var(--muted); margin-right: 16px; }
+footer.site p { margin: 6px 0; }
+
+/* Legal pages */
+.legal { background: var(--card); }
+.legal .wrap { max-width: 820px; }
+.legal h1 { font-size: 34px; margin: 40px 0 6px; letter-spacing: -0.5px; }
+.legal .updated { color: var(--muted); margin: 0 0 26px; }
+.legal h2 { font-size: 22px; margin: 34px 0 10px; }
+.legal h3 { font-size: 18px; margin: 22px 0 8px; }
+.legal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 18px;
+  font-size: 15px;
+}
+.legal th, .legal td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  text-align: left;
+  vertical-align: top;
+}
+.legal th { background: #f1f4f8; }
+.legal .toc {
+  background: #f7f8fa;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 22px;
+  font-size: 15.5px;
+}
+.legal .toc ol { margin: 6px 0; padding-left: 20px; }
+
+.todo {
+  background: #fff2a8;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 32px; }
+  .hero p.lead { font-size: 18px; }
+  nav a { margin-left: 12px; font-size: 14px; }
+  .btn.ghost { margin: 10px 0 0; }
+}
