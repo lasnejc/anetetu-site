@@ -64,7 +64,7 @@
   <h2 id="data">3. Data we process</h2>
   <table>
     <tr><th>Category</th><th>Examples</th><th>Source</th></tr>
-    <tr><td>Account and contact</td><td>First name, email address, phone number (if you use messaging), language, time zone</td><td>You</td></tr>
+    <tr><td>Account and contact</td><td>First and last name, email address, sign-in identifier, language, time zone. Your password is managed by Microsoft Entra: we never have access to it.</td><td>You</td></tr>
     <tr><td>Athlete profile</td><td>Year of birth, sex, height, weight, sports, goals and race dates, availability, training zones, available equipment</td><td>You, or derived from your activities</td></tr>
     <tr><td>Health and wellness <em>(sensitive data)</em></td><td>Sleep, heart rate variability (HRV), resting heart rate, stress, energy level, weight, reported pain and injuries, perceived fatigue</td><td>Your watch (with your consent) and you</td></tr>
     <tr><td>Training</td><td>Activities (type, date, duration, distance, pace, heart rate, power, cadence, laps, elevation, GPS track), strength sessions, perceived effort</td><td>Your watch and you</td></tr>
@@ -112,7 +112,7 @@
   <ul>
     <li><strong>You are interacting with an AI.</strong> Coach messages are generated automatically by a large language model (Azure OpenAI, hosted in the European Union).</li>
     <li><strong>Clear rules.</strong> Your daily readiness is set by explicit rules (for example: HRV below your normal range and low recovery, so the session is made easier). The AI explains these rules and writes the workout.</li>
-    <li><strong>Minimal data.</strong> We only send the model what it needs to answer: your first name, athlete profile, recent data and your message. Never your email address or phone number.</li>
+    <li><strong>Minimal data.</strong> We only send the model what it needs to answer: your first name, athlete profile, recent data and your message. Never your email address.</li>
     <li><strong>No model training.</strong> Neither Coach Forme nor Microsoft uses your data to train AI models. Microsoft may retain requests for up to 30 days solely for abuse monitoring.</li>
     <li><strong>You stay in control.</strong> The coach's proposals are training suggestions. You can decline them, change them or ask for an explanation. No decision producing legal effects or similarly significantly affecting you is made automatically.</li>
     <li><strong>Not medical advice.</strong> The AI can make mistakes. Coach Forme is not a medical device. If you have sharp, persistent or unusual pain, consult a healthcare professional.</li>
@@ -122,15 +122,14 @@
   <p>Only the Coach Forme team at AVEO SOLUTIONS accesses your data, and only when necessary (support, fixing an error). We use the following processors, bound by a data processing agreement under Article 28 GDPR:</p>
   <table>
     <tr><th>Processor</th><th>Role</th><th>Data location</th></tr>
-    <tr><td>Microsoft Ireland Operations Ltd (Microsoft Azure)</td><td>Application hosting (Azure Functions), data storage (Azure Storage / Azure Cosmos DB), secrets vault (Azure Key Vault), AI model (Azure OpenAI)</td><td>European Union (France / West Europe / Sweden regions)</td></tr>
-    <tr><td>Meta Platforms Ireland Ltd (WhatsApp Business Platform)</td><td>Sending and receiving coach messages, if you choose WhatsApp. These messages may contain training and recovery data.</td><td>European Union and United States</td></tr>
+    <tr><td>Microsoft Ireland Operations Ltd (Microsoft Azure)</td><td>Account sign-in (Microsoft Entra External ID), application hosting (Azure Functions), data storage (Azure Storage / Azure Cosmos DB), secrets vault (Azure Key Vault), AI model (Azure OpenAI)</td><td>European Union (France / West Europe / Sweden regions)</td></tr>
     <tr><td>GitHub, Inc.</td><td>Hosting of this informational website only (no app user data)</td><td>United States</td></tr>
     <tr><td>OVH SAS (MX Plan)</td><td>Receiving and sending contact and support emails</td><td>France</td></tr>
   </table>
-  <p>If we add another messaging channel or processor, this list will be updated before it goes live. We may also disclose data to authorities where required by law.</p>
+  <p>If we add another processor, this list will be updated before it goes live. We may also disclose data to authorities where required by law.</p>
 
   <h2 id="transfers">8. Transfers outside the European Union</h2>
-  <p>Application data is hosted in the European Union. If you use WhatsApp, Meta may process some data in the United States. These transfers are covered by the EU–US Data Privacy Framework and by the European Commission's Standard Contractual Clauses.</p>
+  <p>Application data is hosted and processed in the European Union. If Microsoft exceptionally needs to access it from outside the Union, for example for technical support, that access is covered by the EU–US Data Privacy Framework and by the European Commission's Standard Contractual Clauses.</p>
 
   <h2 id="retention">9. How long we keep it</h2>
   <table>

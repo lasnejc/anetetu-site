@@ -64,7 +64,7 @@
   <h2 id="collecte">3. Les données que nous traitons</h2>
   <table>
     <tr><th>Catégorie</th><th>Exemples</th><th>Source</th></tr>
-    <tr><td>Compte et contact</td><td>Prénom, adresse e-mail, numéro de téléphone (si tu utilises la messagerie), langue, fuseau horaire</td><td>Toi</td></tr>
+    <tr><td>Compte et contact</td><td>Prénom et nom, adresse e-mail, identifiant de connexion, langue, fuseau horaire. Ton mot de passe est géré par Microsoft Entra : nous n'y avons jamais accès.</td><td>Toi</td></tr>
     <tr><td>Profil sportif</td><td>Année de naissance, sexe, taille, poids, sports pratiqués, objectifs et dates de course, disponibilités, zones d'entraînement, matériel disponible</td><td>Toi, ou calculé à partir de tes activités</td></tr>
     <tr><td>Santé et bien-être <em>(données sensibles)</em></td><td>Sommeil, variabilité de la fréquence cardiaque (VFC), fréquence cardiaque de repos, stress, niveau d'énergie, poids, douleurs et blessures signalées, fatigue ressentie</td><td>Ta montre (avec ton accord) et toi</td></tr>
     <tr><td>Entraînement</td><td>Activités (type, date, durée, distance, allure, fréquence cardiaque, puissance, cadence, tours, dénivelé, trace GPS), séances de renforcement, effort perçu</td><td>Ta montre et toi</td></tr>
@@ -112,7 +112,7 @@
   <ul>
     <li><strong>Tu échanges avec une IA.</strong> Les messages du coach sont générés automatiquement par un modèle de langage (Azure OpenAI, hébergé dans l'Union européenne).</li>
     <li><strong>Des règles claires.</strong> Ta forme du jour est fixée par des règles explicites (par exemple : VFC sous ta zone normale et récupération faible, donc séance allégée). L'IA explique ces règles et rédige la séance.</li>
-    <li><strong>Données minimales.</strong> Nous n'envoyons au modèle que ce qui est utile pour répondre : ton prénom, ton profil sportif, tes données récentes et ton message. Jamais ton e-mail ni ton numéro de téléphone.</li>
+    <li><strong>Données minimales.</strong> Nous n'envoyons au modèle que ce qui est utile pour répondre : ton prénom, ton profil sportif, tes données récentes et ton message. Jamais ton e-mail.</li>
     <li><strong>Pas d'entraînement de modèles.</strong> Ni Coach Forme ni Microsoft n'utilisent tes données pour entraîner des modèles d'IA. Microsoft peut conserver les requêtes jusqu'à 30 jours, uniquement pour détecter les abus.</li>
     <li><strong>Tu gardes la main.</strong> Les propositions du coach sont des suggestions d'entraînement. Tu peux les refuser, les modifier ou demander une explication. Aucune décision produisant des effets juridiques ou t'affectant de manière significative n'est prise automatiquement.</li>
     <li><strong>Pas un avis médical.</strong> L'IA peut se tromper. Coach Forme n'est pas un dispositif médical. En cas de douleur vive, persistante ou inhabituelle, consulte un professionnel de santé.</li>
@@ -122,15 +122,14 @@
   <p>Seule l'équipe Coach Forme d'AVEO SOLUTIONS accède à tes données, uniquement si c'est nécessaire (assistance, correction d'une erreur). Nous faisons appel aux sous-traitants suivants, liés par un contrat de traitement des données conforme à l'article 28 du RGPD :</p>
   <table>
     <tr><th>Sous-traitant</th><th>Rôle</th><th>Localisation des données</th></tr>
-    <tr><td>Microsoft Ireland Operations Ltd (Microsoft Azure)</td><td>Hébergement de l'application (Azure Functions), stockage des données (Azure Storage / Azure Cosmos DB), coffre de secrets (Azure Key Vault), modèle d'IA (Azure OpenAI)</td><td>Union européenne (régions France / Europe de l'Ouest / Suède)</td></tr>
-    <tr><td>Meta Platforms Ireland Ltd (WhatsApp Business Platform)</td><td>Envoi et réception des messages du coach, si tu choisis WhatsApp. Ces messages peuvent contenir des données d'entraînement et de récupération.</td><td>Union européenne et États-Unis</td></tr>
+    <tr><td>Microsoft Ireland Operations Ltd (Microsoft Azure)</td><td>Connexion à ton compte (Microsoft Entra External ID), hébergement de l'application (Azure Functions), stockage des données (Azure Storage / Azure Cosmos DB), coffre de secrets (Azure Key Vault), modèle d'IA (Azure OpenAI)</td><td>Union européenne (régions France / Europe de l'Ouest / Suède)</td></tr>
     <tr><td>GitHub, Inc.</td><td>Hébergement de ce site vitrine uniquement (aucune donnée d'utilisateur de l'application)</td><td>États-Unis</td></tr>
     <tr><td>OVH SAS (MX Plan)</td><td>Réception et envoi des e-mails de contact et d'assistance</td><td>France</td></tr>
   </table>
-  <p>Si nous ajoutons un autre canal de messagerie ou un autre sous-traitant, cette liste sera mise à jour avant sa mise en service. Nous pouvons enfin communiquer des données aux autorités, si la loi l'exige.</p>
+  <p>Si nous ajoutons un autre sous-traitant, cette liste sera mise à jour avant sa mise en service. Nous pouvons enfin communiquer des données aux autorités, si la loi l'exige.</p>
 
   <h2 id="transferts">8. Transferts hors de l'Union européenne</h2>
-  <p>Les données de l'application sont hébergées dans l'Union européenne. Si tu utilises WhatsApp, Meta peut traiter certaines données aux États-Unis. Ces transferts sont encadrés par le cadre de protection des données UE–États-Unis (Data Privacy Framework) et par les clauses contractuelles types de la Commission européenne.</p>
+  <p>Les données de l'application sont hébergées et traitées dans l'Union européenne. Si Microsoft doit exceptionnellement y accéder depuis l'extérieur de l'Union, par exemple pour une intervention technique, cet accès est encadré par le cadre de protection des données UE–États-Unis (Data Privacy Framework) et par les clauses contractuelles types de la Commission européenne.</p>
 
   <h2 id="conservation">9. Combien de temps nous les gardons</h2>
   <table>
